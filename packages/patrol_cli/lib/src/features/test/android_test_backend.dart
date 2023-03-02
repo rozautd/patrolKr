@@ -26,21 +26,21 @@ class AndroidAppOptions extends AppOptions {
   List<String> toGradleAssembleInvocation({required bool isWindows}) {
     return _toGradleInvocation(
       isWindows: isWindows,
-      task: 'assemble${_effectiveFlavor}Debug',
+      task: 'assembleDevDebug',
     );
   }
 
   List<String> toGradleAssembleTestInvocation({required bool isWindows}) {
     return _toGradleInvocation(
       isWindows: isWindows,
-      task: 'assemble${_effectiveFlavor}DebugAndroidTest',
+      task: 'assembleDevDebugAndroidTest',
     );
   }
 
   List<String> toGradleConnectedTestInvocation({required bool isWindows}) {
     return _toGradleInvocation(
       isWindows: isWindows,
-      task: 'connected${_effectiveFlavor}DebugAndroidTest',
+      task: 'connectedDevDebugAndroidTest',
     );
   }
 
